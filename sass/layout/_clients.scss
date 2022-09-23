@@ -1,9 +1,12 @@
+.clients-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
 .clients-list__item {
-  flex-basis: calc((100% - 150px) / 6);
-
-  &:not(:last-child) {
-    margin-right: 30px;
-  }
+  flex-basis: calc((100% - 30px) / 2);
 }
 .client-link {
   line-height: 0;
@@ -26,4 +29,16 @@
 
 .client-link__icon {
   fill: currentColor;
+}
+
+@media screen and (min-width: 768px) {
+  .clients-list__item {
+    flex-basis: calc((100% - 60px) / 3);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients-list__item {
+    flex-basis: calc((100% - 150px) / 6);
+  }
 }

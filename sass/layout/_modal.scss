@@ -1,5 +1,5 @@
 .backdrop {
-  z-index: 999999999;
+  z-index: 99;
   position: fixed;
   left: 0;
   top: 0;
@@ -23,7 +23,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 528px;
+  width: 450px;
   padding: 40px;
   background-color: var(--modal-bg-color);
 }
@@ -51,5 +51,11 @@
   &:focus {
     box-shadow: 0px 1px 3px rgba(233, 17, 17, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
   }
 }

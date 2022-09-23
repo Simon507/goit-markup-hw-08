@@ -1,7 +1,7 @@
 .modal__title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
@@ -52,6 +52,7 @@
     fill: var(--accent-color);
   }
 }
+
 .comment__txt {
   width: 100%;
   height: 120px;
@@ -125,18 +126,35 @@
     display: block;
   }
 }
-.contract-rules {
-  text-decoration: none;
+.chekbox__block {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
 }
 .contract-rules__link {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   text-decoration: underline;
   color: var(--accent-color);
 
   &:hover {
     text-decoration: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal__title {
+    line-height: 1.15;
+  }
+  .chekbox__block {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+  .contract-rules__link {
+    font-size: 14px;
+    line-height: 1.71;
   }
 }

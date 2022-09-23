@@ -1,0 +1,33 @@
+.footer-contacts-list {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 9px;
+}
+.footer-address,
+.footer-mailto,
+.footer-tel {
+  // -----  использовал плейсхолдер -----
+  @extend %footer-contacts;
+}
+.footer-address {
+  color: var(--footer-text-color);
+  &:focus,
+  &:hover {
+    color: var(--accent-color);
+  }
+}
+.footer-mailto {
+  color: rgba(255, 255, 255, 0.6);
+  &:focus,
+  &:hover {
+    color: var(--accent-color);
+  }
+}
+.footer-tel {
+  color: rgba(255, 255, 255, 0.6);
+  &:focus,
+  &:hover {
+    color: var(--accent-color);
+  }
+}

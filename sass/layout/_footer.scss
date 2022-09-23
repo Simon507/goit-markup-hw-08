@@ -1,0 +1,14 @@
+.site-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--footer-bg-color);
+}
+.footer-flexbox {
+  display: flex;
+  align-items: baseline;
+}
+.foter-contacts {
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 70px;
+}

@@ -1,0 +1,55 @@
+.backdrop {
+  z-index: 999999999;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--backdrop-bgc-color);
+  opacity: 1;
+  visibility: visible;
+  transform: scale(100%);
+  transition: transform var(--transition-rules), opacity var(--transition-rules),
+    visibility var(--transition-rules);
+}
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0%);
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  padding: 40px;
+  background-color: var(--modal-bg-color);
+}
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+.modal-close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--act-btn-txt-color);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: box-shadow var(--transition-rules), opacity var(--transition-rules),
+    transform var(--transition-rules), visibility var(--transition-rules);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 3px rgba(233, 17, 17, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+}

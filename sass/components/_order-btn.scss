@@ -1,0 +1,25 @@
+.order-btn {
+  min-width: 216px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 32px;
+  padding-right: 32px;
+  font-family: inherit;
+  background-color: var(--order-btn-color);
+  color: var(--hero-text-color);
+  border: 0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 1);
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.89;
+  letter-spacing: 0.06em;
+  transition: box-shadow var(--transition-rules), background-color var(--transition-rules);
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    background-color: var(--order-btn-act-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}

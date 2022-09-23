@@ -1,12 +1,17 @@
 .nav-list {
-  display: flex;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-list {
+    display: flex;
+  }
 }
 .nav-list__item {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
   cursor: pointer;
-
   &:not(:last-child) {
     margin-right: 50px;
   }
@@ -41,5 +46,13 @@
     height: 4px;
     background-color: var(--accent-color);
     border-radius: 2px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .nav-list__item {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
   }
 }

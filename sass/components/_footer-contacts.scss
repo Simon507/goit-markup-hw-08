@@ -1,7 +1,12 @@
+.foter-contacts {
+  flex-direction: column;
+  margin-bottom: 60px;
+}
+
 .footer-contacts-list {
   display: flex;
   flex-direction: column;
-  text-align: left;
+  text-align: center;
   gap: 9px;
 }
 .footer-address,
@@ -29,5 +34,17 @@
   &:focus,
   &:hover {
     color: var(--accent-color);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .foter-contacts {
+    align-items: flex-start;
+  }
+  .footer-contacts-list {
+    text-align: left;
+  }
+  .foter-contacts {
+    margin-bottom: 0;
   }
 }

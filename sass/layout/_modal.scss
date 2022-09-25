@@ -44,8 +44,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: box-shadow var(--transition-rules), opacity var(--transition-rules),
-    transform var(--transition-rules), visibility var(--transition-rules);
+  transition: box-shadow var(--transition-rules);
 
   &:hover,
   &:focus {

@@ -7,11 +7,18 @@
     background-color: transparent;
     line-height: 0;
     padding: 0;
-    // cursor: pointer;
+    cursor: pointer;
+    color: var(--main-text-color);
+    transition: color var(--transition-rules);
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
   }
-  // .menu {display: none;}
 }
-
+.burger-btn__icon {
+  fill: currentColor;
+}
 @media screen and (min-width: 768px) {
   .burger-btn {
     display: none;

@@ -53,6 +53,12 @@
   }
 }
 
+@media screen and (max-width: 767px) {
+  .modal {
+    width: 100%;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .modal {
     width: 528px;

@@ -6,7 +6,10 @@
     border: 0;
     background-color: transparent;
     line-height: 0;
-    padding: 0;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 8px;
+    padding-right: 8px;
     cursor: pointer;
     color: var(--main-text-color);
     transition: color var(--transition-rules);

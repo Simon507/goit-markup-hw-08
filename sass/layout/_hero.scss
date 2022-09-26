@@ -54,19 +54,6 @@
   .hero__overlay {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url(../images/hero-img/desktop/desktop.jpg);
-  }
-}
-
-@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
-  screen and (min-resolution: 192dpi) and (min-width: 1200px),
-  screen and (min-resolution: 2dppx) and (min-width: 1200px) {
-  .hero__overlay {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../images/hero-img/desktop/desktop@2x.jpg);
-    max-width: 1600px;
-    height: 600px;
-  }
-  .hero {
     padding-top: 200px;
     padding-bottom: 200px;
   }
@@ -74,5 +61,16 @@
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
+  }
+
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+    screen and (min-resolution: 192dpi) and (min-width: 1200px),
+    screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+    .hero__overlay {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-img/desktop/desktop@2x.jpg);
+      max-width: 1600px;
+      height: 600px;
+    }
   }
 }

@@ -186,7 +186,10 @@ img {
     border: 0;
     background-color: transparent;
     line-height: 0;
-    padding: 0;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 8px;
+    padding-right: 8px;
     cursor: pointer;
     color: var(--main-text-color);
     transition: color var(--transition-rules);
@@ -220,6 +223,7 @@ img {
   align-items: center;
   color: inherit;
   cursor: pointer;
+  transition: color var(--transition-rules);
 }
 .close-btn:hover, .close-btn:focus {
   color: var(--accent-color);
@@ -790,6 +794,15 @@ img {
   letter-spacing: 0.03em;
 }
 
+.contract-rules {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+  text-decoration: none;
+}
+
 .contract-rules__link {
   font-weight: 400;
   font-size: 12px;
@@ -875,17 +888,21 @@ img {
 
 .mobile-menu__container {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   padding-top: 48px;
   padding-bottom: 48px;
-  padding-left: 25px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .menu-nav-list {
+  margin-bottom: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 32px;
-  margin-bottom: 300px;
 }
 
 .menu-nav-list__link {
@@ -941,6 +958,7 @@ img {
 
 .menu-social-list {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .menu-social-list__item {
@@ -951,11 +969,9 @@ img {
   line-height: 1.22;
   letter-spacing: 0.02em;
 }
-.menu-social-list__item:not(:first-child) {
-  padding-left: 10px;
-}
 .menu-social-list__item:not(:last-child) {
   padding-right: 10px;
+  margin-right: 10px;
   border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 
@@ -1021,15 +1037,6 @@ img {
 @media screen and (min-width: 1200px) {
   .hero__overlay {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-img/desktop/desktop.jpg);
-  }
-}
-@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
-  .hero__overlay {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-img/desktop/desktop@2x.jpg);
-    max-width: 1600px;
-    height: 600px;
-  }
-  .hero {
     padding-top: 200px;
     padding-bottom: 200px;
   }
@@ -1039,9 +1046,17 @@ img {
     line-height: 1.36;
   }
 }
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-width: 1200px) and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-width: 1200px) and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .hero__overlay {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-img/desktop/desktop@2x.jpg);
+    max-width: 1600px;
+    height: 600px;
+  }
+}
 .benefits-list {
   display: flex;
   flex-wrap: wrap;
+  gap: 30px;
 }
 
 .benefits-list__item {
@@ -1078,7 +1093,6 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
-  margin-bottom: 30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1089,10 +1103,16 @@ img {
     text-align: left;
     flex-basis: calc((100% - 30px) / 2);
   }
+  .benefits-list__title {
+    text-align: left;
+  }
 }
 @media screen and (min-width: 1200px) {
   .benefits-list__item {
     flex-basis: calc((100% - 90px) / 4);
+  }
+  .benefits-list__title {
+    text-align: center;
   }
 }
 @media screen and (max-width: 1199px) {
@@ -1273,6 +1293,10 @@ img {
 
 .portfolio__item {
   width: 100%;
+  display: flex;
+  border-left: 1px solid var(--portfolio-item-border);
+  border-right: 1px solid var(--portfolio-item-border);
+  border-bottom: 1px solid var(--portfolio-item-border);
 }
 
 .portfolio-link {
@@ -1307,7 +1331,7 @@ img {
   letter-spacing: 0.03em;
   color: var(--portfolio-overlay-txt-color);
   overflow: auto;
-  transform: translateY(100%);
+  transform: translateY(101%);
   transition: transform var(--transition-rules);
 }
 .portfolio-link:hover .portfolio-link__txt, .portfolio-link:focus .portfolio-link__txt {
@@ -1315,10 +1339,8 @@ img {
 }
 
 .portfolio-card {
+  text-align: left;
   padding: 20px;
-  border-left: 1px solid var(--portfolio-item-border);
-  border-right: 1px solid var(--portfolio-item-border);
-  border-bottom: 1px solid var(--portfolio-item-border);
 }
 
 .portfolio-card__title {
@@ -1340,6 +1362,7 @@ img {
 @media screen and (min-width: 768px) {
   .portfolio__item {
     flex-basis: calc((100% - 30px) / 2);
+    display: flex;
   }
 }
 @media screen and (min-width: 1200px) {

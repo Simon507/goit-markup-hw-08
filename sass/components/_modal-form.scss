@@ -106,6 +106,7 @@
 
 .modern-checkbox {
   margin-right: 7px;
+  flex-shrink: 0;
   transition: fill var(--transition-rules);
 
   .classik-checkbox:focus + & {

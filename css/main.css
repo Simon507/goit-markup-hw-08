@@ -647,7 +647,7 @@ img {
 @media screen and (min-width: 768px) {
   .portfolio-filter {
     justify-content: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -767,6 +767,7 @@ img {
 
 .modern-checkbox {
   margin-right: 7px;
+  flex-shrink: 0;
   transition: fill var(--transition-rules);
 }
 .classik-checkbox:focus + .modern-checkbox {
@@ -867,6 +868,10 @@ img {
     justify-content: flex-start;
   }
 }
+.no-scroll {
+  overflow: hidden;
+}
+
 .mobile-menu.is-open {
   opacity: 1;
   pointer-events: auto;
@@ -1036,6 +1041,7 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .hero__overlay {
+    max-width: 1600px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-img/desktop/desktop.jpg);
     padding-top: 200px;
     padding-bottom: 200px;
@@ -1294,13 +1300,12 @@ img {
 .portfolio__item {
   width: 100%;
   display: flex;
-  border-left: 1px solid var(--portfolio-item-border);
-  border-right: 1px solid var(--portfolio-item-border);
-  border-bottom: 1px solid var(--portfolio-item-border);
 }
 
 .portfolio-link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   text-decoration: none;
   transition: box-shadow var(--transition-rules);
 }
@@ -1339,8 +1344,15 @@ img {
 }
 
 .portfolio-card {
+  flex-grow: 1;
   text-align: left;
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 24px;
+  padding-left: 24px;
+  border-left: 1px solid var(--portfolio-item-border);
+  border-right: 1px solid var(--portfolio-item-border);
+  border-bottom: 1px solid var(--portfolio-item-border);
 }
 
 .portfolio-card__title {

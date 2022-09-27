@@ -6,12 +6,11 @@
 .portfolio__item {
   width: 100%;
   display: flex;
-  border-left: 1px solid var(--portfolio-item-border);
-  border-right: 1px solid var(--portfolio-item-border);
-  border-bottom: 1px solid var(--portfolio-item-border);
 }
 .portfolio-link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   text-decoration: none;
   transition: box-shadow var(--transition-rules);
 
@@ -53,9 +52,15 @@
   }
 }
 .portfolio-card {
+  flex-grow: 1;
   text-align: left;
-  padding: 20px;
-  
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 24px;
+  padding-left: 24px;
+  border-left: 1px solid var(--portfolio-item-border);
+  border-right: 1px solid var(--portfolio-item-border);
+  border-bottom: 1px solid var(--portfolio-item-border);
 }
 .portfolio-card__title {
   font-weight: 700;
